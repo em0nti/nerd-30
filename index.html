@@ -3,90 +3,97 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Нёрдс</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a>
-        <img src="/img/nerds-logo.svg" alt="Логотип компании Nerds" width="160" height="65">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="main-nav__link main-nav__logo">
+        <img class="logo" src="/img/nerds-logo.svg" alt="Логотип компании Nerds" width="160" height="65">
       </a>
-      <ul>
-        <li><a href="blank.html">Студия</a></li>
-        <li><a href="blank.html">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="blank.html">Студия</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="blank.html">Клиенты</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link_active" href="catalog.html">Магазин</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="blank.html">Контакты</a></li>
       </ul>
-      <a href="blank.html">Корзина</a>
+      <a class="main-nav__link" href="blank.html">Корзина</a>
     </nav>
   </header>
-  <main>
+  <main class="content">
     <h1 class="visually-hidden">Студия вэб разработки Nerds</h1>
-    <section>
-      <h2 class="visually-hidden">Преимущества</h2>
-      <ul>
-        <li>
-          <p>Долго, дорого, скрупулезно.</p>
-          <p>Математически выверенный дизайн <br>
-            для вашего сайта или мобильного приложения.</p>
-          <a href="blank.html">Узнать больше</a>
-          <img width="698" height="413" src="/img/nerds_index_slide1.png" alt="Изображение мобильных телефонов">
-        </li>
-        <li>
-          <p>Любим математику как никто другой</p>
-          <p>Никакого креатива, только математические формулы <br>
-            для расчета идеальных пропорций.</p>
-          <a href="blank.html">Узнать больше</a>
-          <img src="/img/nerds_index_slide2.png" alt="Изображение мониторов">
-        </li>
-        <li>
-          <p>Только ночь, только хардкор</p>
-          <p>Работать днем, как все? Мы против этого.<br>
-            Ближе к полуночи работа только начинается.</p>
-          <a href="blank.html">Узнать больше</a>
-          <img width="759" height="411" src="/img/nerds_index_slide3.png" alt="Приложения">
-        </li>
-      </ul>
-      <!-- пагинация для слайдера -->
-      <ul>
-        <li>
-          <button></button>
-        </li>
-        <li>
-          <button></button>
-        </li>
-        <li>
-          <button></button>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>
+    <div class="slider">
+      <section class="features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features__list">
+          <li class="features__item slider__item">
+            <p class="slider__header">Долго, дорого,<br>скрупулезно.</p>
+            <p>Математически выверенный дизайн <br>
+              для вашего сайта или мобильного приложения.</p>
+            <a class="button button_bg_red" href="blank.html">Узнать больше</a>
+            <img width="698" height="413" src="/img/nerds_index_slide1.png" alt="Изображение мобильных телефонов">
+          </li>
+          <li class="features__item slider__item">
+            <p class="slider__header">Любим математику как никто другой</p>
+            <p>Никакого креатива, только математические формулы <br>
+              для расчета идеальных пропорций.</p>
+            <a class="button button_bg_red" href="blank.html">Узнать больше</a>
+            <img src="/img/nerds_index_slide2.png" alt="Изображение мониторов">
+          </li>
+          <li class="features__item slider__item">
+            <p class="slider__header">Только ночь, только хардкор</p>
+            <p>Работать днем, как все? Мы против этого.<br>
+              Ближе к полуночи работа только начинается.</p>
+            <a class="button button_bg_red" href="blank.html">Узнать больше</a>
+            <img width="759" height="411" src="/img/nerds_index_slide3.png" alt="Приложения">
+          </li>
+        </ul>
+        <!-- пагинация для слайдера -->
+        <ul class="slider__pagination-list">
+          <li class="slider__pagination-item">
+            <button></button>
+          </li>
+          <li class="slider__pagination-item">
+            <button></button>
+          </li>
+          <li class="slider__pagination-item">
+            <button></button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- /.slider -->
+    <section class="services">
+      <h2 class="visually-hidden">
         Наши услуги
       </h2>
-      <ul>
-        <li>
+      <ul class="services__list">
+        <li class="services__item">
           <img src="/img/illustration_1_2234.jpg" alt="Изображение веб-сайты">
-          <h3>Веб-сайты</h3>
+          <h3 class="services__header">Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button type="button">Заказать</button>
+          <button class="button button_bg_red" type="button">Заказать</button>
         </li>
         <li> <img src="/img/illustration_2_2233.jpg" alt="Изображение Приложения">
-          <h3>Приложения</h3>
+          <h3 class="services__header">Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <button type="button">Заказать</button>
+          <button class="button button_bg_green" type="button">Заказать</button>
         </li>
         <li> <img src="/img/illustration_3_2232.jpg" alt="Изображение презентации">
-          <h3>Презентации</h3>
+          <h3 class="services__header">Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <button type="button">Заказать</button>
+          <button class="button button_bg_yellow" type="button">Заказать</button>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="about-us">
       <h2 class="visually-hidden">О компании</h2>
-      <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+      <p class="about-us__header">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
         рук, как роботы.</p>
       <h3>Выполняем заказы на разработку:</h3>
@@ -117,34 +124,49 @@
         </li>
       </ul>
     </section>
-    <section>
-      <h2>Партнеры</h2>
-      <ul>
-        <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="/img/logo_1.png"
-              alt="логотип html academy" width="199" height="68"></a></li>
-        <li><a href="blank.html"><img src="/img/logo_2.png" alt="лого барбершоп бородинский" width="209"
-              height="90"></a></li>
-        <li><a href="blank.html"><img src="/img/logo_3.png" alt="лого pink" width="185" height="52"></a></li>
-        <li><a href="blank.html"><img src="/img/logo_4.png" alt="лого mishka" width="173" height="84"></a></li>
+    <section class="partners">
+      <h2 class="visually-hidden">Партнеры</h2>
+      <ul class="partners__list">
+        <li class="partners__item">
+          <a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="/img/logo_1.png" alt="логотип html academy" width="199" height="68">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="blank.html">
+            <img src="/img/logo_2.png" alt="лого барбершоп бородинский" width="209" height="90">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="blank.html">
+            <img src="/img/logo_3.png" alt="лого pink" width="185" height="52">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="blank.html">
+            <img src="/img/logo_4.png" alt="лого mishka" width="173" height="84">
+          </a>
+        </li>
       </ul>
     </section>
   </main>
-  <footer>
-    <section>
+  <footer class="main-footer">
+    <section class="map">
       <h2 class="visually-hidden">Как добраться</h2>
       <img src="/img/map_1_1999.jpg" alt="Изображение карты с маркером" width="1440" height="416">
       <!-- Блок карты: интерактивная карта. Высота карты постоянная, ширина подстраивается под ширину вьюпорта, но не уже контентной ширины макета. На карте размещён маркер. Центр карты соответствует центру блока в макете. Допустимо использовать как стандартный, так и кастомный маркер. Реализация по желанию. -->
     </section>
-    <section>
+    <section class="contacts">
       <h2>NЁRDS DESIGN STUDIO</h2>
       <p>191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8<br>
         <br>
-        тел. +7 (812) 275-75-75</p>
+        тел. +7 (812) 275-75-75
+      </p>
       <!-- Клик по кнопке «Напишите нам» открывает модальное окно с формой обратной связи. Окно позиционируется относительно вьюпорта, а не страницы. -->
       <button type="button">Напишите нам</button>
     </section>
-    <section>
+    <section class="social-media">
       <h2 class="visually-hidden">Social Media</h2>
       <p>Давайте дружить, это выгодно!</p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -155,7 +177,7 @@
       </ul>
     </section>
   </footer>
-  <section>
+  <section class="modal write-us">
     <h2>Напишите нам</h2>
     <form action="">
       <!-- Реализовать Форму -->
