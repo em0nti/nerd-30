@@ -1,0 +1,212 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-red: #FB565A;
+  --basic-green: #00CA74;
+  --basic-yellow: #EFC84A;
+  --basic-grey: #A6A6A6;
+  --basic-grey-light-0: #EEEEEE; /*header bg*/
+  --basic-grey-light-1: #E1E1E1;
+  --basic-grey-extralight: #D7DCDE; /*form border */
+  --basic-grey-dark-0: #444444; /*text color in form*/
+  --basic-grey-dark-1: #4D4D4D;
+  --basic-grey-dark-2: #666666; /* text on the card*/
+
+  --basic-text: #283136;
+
+  --accent-1-red: #E74246;
+  --accent-2-red: #D7373B;
+  --accent-1-green: #00BC6C;
+  --accent-2-green: #00AA62;
+  --accent-1-yellow: #EAB534;
+  --accent-2-yellow: #E5A722;
+  --accent-1-grey: #DFDFDF;
+  --accent-2-grey: #D5D5D5;
+
+
+  --opacity-black-10: rgba(0,0,0,0.1);
+  --opacity-black-20: rgba(0,0,0,0.2);
+  --opacity-black-30: rgba(0,0,0,0.3);
+  --opacity-black-60: rgba(0,0,0,0.6);
+  --opacity-white-30: rgba(255,255,255,0.3);
+  --opacity-grey-dark-50: rgba(68,68,68,0.5); /*text color in form*/
+  --opacity-red-10: rgba(251,86,90,0.1);
+  --opacity-red-30: rgba(251,86,90,0.3);
+  --opacity-grey-dark-1-12: rgba(77,77,77,0.12);
+  --opacity-grey-dark-1-40: rgba(77,77,77,0.4);
+  --opacity-basic-dark-0-30: rgba(40,49,54,0.3);
+}
+
+/* Global */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* --------------------------------------- */
+/* Button */
+.button {
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  color: var(--basic-white);
+
+  padding: 16px 54px;
+
+  border-width: 0;
+  border-radius: 3px;
+}
+/* ------------------ */
+.button_bg_red {
+  background-color: var(--basic-red);
+}
+.button_bg_red:hover,
+.button_bg_red:focus {
+  background-color: var(--accent-1-red);
+}
+.button_bg_red:active {
+  background-color: var(--accent-2-red);
+  color: var(--opacity-white-30);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+/* ------------------ */
+.button_bg_green {
+  background-color: var(--basic-green);
+}
+.button_bg_green:hover,
+.button_bg_green:focus {
+  background-color: var(--accent-1-green);
+}
+.button_bg_green:active {
+  background-color: var(--accent-2-green);
+  color: var(--opacity-white-30);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+/* ------------------- */
+.button_bg_yellow {
+  background-color: var(--basic-yellow);
+}
+.button_bg_yellow:hover,
+.button_bg_yellow:focus {
+  background-color: var(--accent-1-yellow);
+}
+.button_bg_yellow:active {
+  background-color: var(--accent-2-yellow);
+  color: var(--opacity-white-30);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+/* --------------------------------------- */
+/* Main Header */
+.main-header {
+  background-color: var(--basic-grey-light-0);
+}
+
+/* Main Navigation */
+
+.main-nav {
+  background-color: transparent;
+  color: var(--basic-black);
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__link:not(.main-nav__logo) {
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+.main-nav__link:link {
+  color: var(--basic-black);
+}
+.main-nav__link:visited {
+  color:var(--basic-black);
+}
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: var(--basic-red);
+}
+.main-nav__link:active {
+  color: var(--opacity-black-30);
+}
+.main-nav__link_active {
+  border-bottom: 2px solid var(--basic-red);
+}
+
+/* Features section */
+
+.features__list {
+  list-style: none;
+  margin: 0;
+}
+
+/* Slider */
+
+.slider {
+  background-color: var(--basic-grey-light-0);
+}
+.slider__header {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: var(--basic-black);
+  text-align: left;
+
+  margin: 0;
+}
+.slider__pagination-list {
+  list-style: none;
+}
+
+/* Services Section */
+
+.services__list {
+  list-style: none;
+}
+.services__item {
+  text-align: left;
+}
+.services__header {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
